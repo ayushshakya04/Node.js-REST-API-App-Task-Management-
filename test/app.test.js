@@ -20,11 +20,11 @@ describe('Task Manager API', () => {
     const res = await request(app)
       .post('/api/tasks')
       .send({
-        title: 'New Task',
+        title: 'New Tasks',
         completed: false
       });
     expect(res.statusCode).toEqual(201);
-    expect(res.body).toHaveProperty('title', 'New Task');
+    expect(res.body).toHaveProperty('title', 'New Tasks');
   });
 
   it('PUT /api/tasks/:id - should update a task', async () => {
